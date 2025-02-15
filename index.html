@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nirvana Hair Oil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#C4A484',
+                        secondary: '#E5D3B3'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        .nav-sticky { transition: all 0.3s ease; }
+        .nav-sticky.scrolled { background: rgba(255, 255, 255, 0.95); box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .product-card { transition: transform 0.3s ease; }
+        .product-card:hover { transform: translateY(-5px); }
+        .review-card { transition: all 0.3s ease; }
+        .review-card:hover { transform: translateY(-5px); }
+        .faq-item { transition: all 0.3s ease; }
+    </style>
+</head>
+<body class="bg-white">
+    <nav class="nav-sticky fixed w-full z-50 py-4">
+        <div class="container mx-auto px-6 flex items-center justify-between">
+            <a href="#" class="text-3xl font-['Pacifico'] text-primary">Nirvana</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="text-gray-700 hover:text-primary transition-colors">About</a>
+                <a href="#benefits" class="text-gray-700 hover:text-primary transition-colors">Benefits</a>
+                <a href="#reviews" class="text-gray-700 hover:text-primary transition-colors">Reviews</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button id="cartBtn" class="w-10 h-10 flex items-center justify-center relative">
+                    <i class="ri-shopping-cart-line text-xl"></i>
+                    <span class="absolute -top-1 -right-1 bg-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative min-h-screen flex items-center" style="background-image: url('https://public.readdy.ai/ai/img_res/90d5260414b78f8ca80bddcc6131c27d.jpg'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-gradient-to-r from-white/90 to-transparent"></div>
+        <div class="container mx-auto px-6 relative">
+            <div class="max-w-2xl">
+                <h1 class="text-6xl font-bold mb-6 leading-tight">Luxury Hair Care in Every Drop</h1>
+                <p class="text-xl mb-8 text-gray-700">Experience the transformation with our premium hair oil, crafted from nature's finest ingredients for silky, healthy, and radiant hair.</p>
+                <button class="bg-primary text-white px-8 py-4 text-lg font-semibold !rounded-button hover:opacity-90 transition-opacity">
+                    Shop Now
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="packages" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">Choose Your Perfect Size</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="product-card bg-white p-8 rounded-lg shadow-lg text-center">
+                    <div class="mb-6">
+                        <img src="https://public.readdy.ai/ai/img_res/a8f15767ca74a1270d1c5c89ab0e3f54.jpg" alt="100ml bottle" class="w-full h-64 object-cover object-top rounded-lg">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">100ml Starter Size</h3>
+                    <p class="text-gray-600 mb-4">Perfect for trying</p>
+                    <p class="text-2xl font-bold text-primary mb-4">₹140</p>
+                    <div class="flex items-center justify-center gap-4 mb-4">
+                        <button class="quantity-btn minus w-8 h-8 flex items-center justify-center border !rounded-button">-</button>
+                        <input type="text" class="w-16 text-center border-none" value="1" readonly>
+                        <button class="quantity-btn plus w-8 h-8 flex items-center justify-center border !rounded-button">+</button>
+                    </div>
+                    <button class="w-full bg-primary text-white py-3 !rounded-button hover:opacity-90 transition-opacity">Add to Cart</button>
+                </div>
+
+                <div class="product-card bg-white p-8 rounded-lg shadow-lg text-center relative">
+                    <div class="absolute top-4 right-4 bg-primary text-white px-4 py-1 rounded-full text-sm">Most Popular</div>
+                    <div class="mb-6">
+                        <img src="https://public.readdy.ai/ai/img_res/8827ad4e35396cce5c0e5e9c362de21c.jpg" alt="200ml bottle" class="w-full h-64 object-cover object-top rounded-lg">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">200ml Standard</h3>
+                    <p class="text-gray-600 mb-4">Our bestselling size</p>
+                    <p class="text-2xl font-bold text-primary mb-4">₹280</p>
+                    <div class="flex items-center justify-center gap-4 mb-4">
+                        <button class="quantity-btn minus w-8 h-8 flex items-center justify-center border !rounded-button">-</button>
+                        <input type="text" class="w-16 text-center border-none" value="1" readonly>
+                        <button class="quantity-btn plus w-8 h-8 flex items-center justify-center border !rounded-button">+</button>
+                    </div>
+                    <button class="w-full bg-primary text-white py-3 !rounded-button hover:opacity-90 transition-opacity">Add to Cart</button>
+                </div>
+
+                <div class="product-card bg-white p-8 rounded-lg shadow-lg text-center">
+                    <div class="mb-6">
+                        <img src="https://public.readdy.ai/ai/img_res/e2ab2ed5f509e34ecf17fd13474f4321.jpg" alt="500ml bottle" class="w-full h-64 object-cover object-top rounded-lg">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">500ml Value Size</h3>
+                    <p class="text-gray-600 mb-4">Best value for regular use</p>
+                    <p class="text-2xl font-bold text-primary mb-4">₹600 </p>
+                    <div class="flex items-center justify-center gap-4 mb-4">
+                        <button class="quantity-btn minus w-8 h-8 flex items-center justify-center border !rounded-button">-</button>
+                        <input type="text" class="w-16 text-center border-none" value="1" readonly>
+                        <button class="quantity-btn plus w-8 h-8 flex items-center justify-center border !rounded-button">+</button>
+                    </div>
+                    <button class="w-full bg-primary text-white py-3 !rounded-button hover:opacity-90 transition-opacity">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="benefits" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">Why Choose Nirvana</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+                        <i class="ri-leaf-line text-4xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">100% Natural</h3>
+                    <p class="text-gray-600">Made with pure, organic ingredients sourced from nature</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+                        <i class="ri-shield-star-line text-4xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Clinically Proven</h3>
+                    <p class="text-gray-600">Tested and approved by dermatologists</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+                        <i class="ri-heart-line text-4xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Nourishing Formula</h3>
+                    <p class="text-gray-600">Deep conditioning for healthier, shinier hair</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+                        <i class="ri-recycle-line text-4xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Sustainable</h3>
+                    <p class="text-gray-600">Eco-friendly packaging and responsible sourcing</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-to-use" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">How to Use</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mb-6">1</div>
+                    <h3 class="text-xl font-bold mb-4">Apply to Dry Hair</h3>
+                    <p class="text-gray-600">Take 2-3 drops and warm between palms before applying</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mb-6">2</div>
+                    <h3 class="text-xl font-bold mb-4">Massage Scalp</h3>
+                    <p class="text-gray-600">Gently massage into scalp and work through to ends</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mb-6">3</div>
+                    <h3 class="text-xl font-bold mb-4">Leave In</h3>
+                    <p class="text-gray-600">Leave for 30 minutes or overnight for deep treatment</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">Customer Reviews</h2>
+            <div class="text-center mb-12">
+                <div class="text-4xl font-bold text-primary mb-2">4.9</div>
+                <div class="flex items-center justify-center mb-2">
+                    <i class="ri-star-fill text-yellow-400"></i>
+                    <i class="ri-star-fill text-yellow-400"></i>
+                    <i class="ri-star-fill text-yellow-400"></i>
+                    <i class="ri-star-fill text-yellow-400"></i>
+                    <i class="ri-star-fill text-yellow-400"></i>
+                </div>
+                <p class="text-gray-600">Based on 2,547 reviews</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="review-card bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://public.readdy.ai/ai/img_res/d640e348d2312cf400939b84d6bf86ff.jpg" alt="Sarah Mitchell" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold">Sarah Mitchell</h4>
+                            <div class="flex">
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">This hair oil has completely transformed my dry, damaged hair. After just a few weeks of use, my hair feels softer and looks healthier than ever.</p>
+                </div>
+                <div class="review-card bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://public.readdy.ai/ai/img_res/5f22431923ff2f533bae74583f4d9e8e.jpg" alt="James Wilson" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold">James Wilson</h4>
+                            <div class="flex">
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">I was skeptical at first, but this oil really works! My hair is noticeably shinier and more manageable. The scent is amazing too.</p>
+                </div>
+                <div class="review-card bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://public.readdy.ai/ai/img_res/180ddc545fc1fadeb804d459b31ef534.jpg" alt="Emma Thompson" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold">Emma Thompson</h4>
+                            <div class="flex">
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">Worth every penny! This oil has helped reduce my split ends and made my hair much more manageable. I'm on my third bottle now.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">Frequently Asked Questions</h2>
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="faq-item bg-white rounded-lg shadow-lg">
+                    <button class="w-full px-6 py-4 text-left font-bold flex items-center justify-between">
+                        <span>How often should I use the hair oil?</span>
+                        <i class="ri-arrow-down-s-line"></i>
+                    </button>
+                    <div class="px-6 py-4 hidden">
+                        <p class="text-gray-600">We recommend using the oil 2-3 times per week for best results. You can leave it on overnight for deep conditioning or apply it for 30 minutes before washing.</p>
+                    </div>
+                </div>
+                <div class="faq-item bg-white rounded-lg shadow-lg">
+                    <button class="w-full px-6 py-4 text-left font-bold flex items-center justify-between">
+                        <span>Is it suitable for all hair types?</span>
+                        <i class="ri-arrow-down-s-line"></i>
+                    </button>
+                    <div class="px-6 py-4 hidden">
+                        <p class="text-gray-600">Yes, our hair oil is formulated to work with all hair types, from fine to coarse, straight to curly. The lightweight formula won't weigh down your hair.</p>
+                    </div>
+                </div>
+                <div class="faq-item bg-white rounded-lg shadow-lg">
+                    <button class="w-full px-6 py-4 text-left font-bold flex items-center justify-between">
+                        <span>What are the main ingredients?</span>
+                        <i class="ri-arrow-down-s-line"></i>
+                    </button>
+                    <div class="px-6 py-4 hidden">
+                        <p class="text-gray-600">Our oil contains 100% natural ingredients including Argan Oil, Jojoba Oil, Vitamin E, and essential oils for fragrance. All ingredients are ethically sourced and organic.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12">
+                <div>
+                    <h3 class="text-2xl font-['Pacifico'] mb-6">Nirvana</h3>
+                    <p class="text-gray-400">Transform your hair with our premium, natural hair oil. Experience luxury in every drop.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="#benefits" class="text-gray-400 hover:text-white transition-colors">Benefits</a></li>
+                        <li><a href="#reviews" class="text-gray-400 hover:text-white transition-colors">Reviews</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Contact</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-center">
+                            <i class="ri-mail-line mr-2"></i>
+                            <span class="text-gray-400">support@nirvana.xyz</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-phone-line mr-2"></i>
+                            <span class="text-gray-400">+91 6238998062</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Newsletter</h4>
+                    <form class="space-y-4">
+                        <input type="email" placeholder="Enter your email" class="w-full px-4 py-2 rounded-button bg-gray-800 border-none text-white placeholder-gray-400">
+                        <button class="w-full bg-primary text-white py-2 !rounded-button hover:opacity-90 transition-opacity">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">© 2025 Nirvana. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="ri-instagram-line text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="ri-facebook-line text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="ri-twitter-line text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const nav = document.querySelector('.nav-sticky');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 0) {
+                    nav.classList.add('scrolled');
+                } else {
+                    nav.classList.remove('scrolled');
+                }
+            });
+
+            const quantityBtns = document.querySelectorAll('.quantity-btn');
+            quantityBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const input = this.parentElement.querySelector('input');
+                    let value = parseInt(input.value);
+                    if (this.classList.contains('plus')) {
+                        value = Math.min(value + 1, 10);
+                    } else {
+                        value = Math.max(value - 1, 1);
+                    }
+                    input.value = value;
+                });
+            });
+
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const btn = item.querySelector('button');
+                const content = item.querySelector('div[class*="px-6"]');
+                const icon = item.querySelector('i');
+                
+                btn.addEventListener('click', () => {
+                    const isOpen = !content.classList.contains('hidden');
+                    
+                    faqItems.forEach(otherItem => {
+                        const otherContent = otherItem.querySelector('div[class*="px-6"]');
+                        const otherIcon = otherItem.querySelector('i');
+                        otherContent.classList.add('hidden');
+                        otherIcon.style.transform = 'rotate(0deg)';
+                    });
+
+                    if (!isOpen) {
+                        content.classList.remove('hidden');
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
